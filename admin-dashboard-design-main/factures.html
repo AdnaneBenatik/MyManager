@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Factures</title>
+  <link rel="stylesheet" href="factures.css">
+</head>
+<body>
+  <h1>Gestion des Factures</h1>
+
+  <!-- Formulaire pour ajouter une facture -->
+  <h2>Ajouter une Facture</h2>
+  <form id="create-facture-form">
+    <label for="clientFacture">Client :</label>
+    <input type="text" id="clientFacture" name="client" required>
+
+    <label for="dateFacture">Date :</label>
+    <input type="date" id="dateFacture" name="date" required>
+
+    <label for="montantFacture">Montant (€) :</label>
+    <input type="number" id="montantFacture" name="montant" required>
+
+    <label for="statutFacture">Statut :</label>
+    <input type="text" id="statutFacture" name="statut" required>
+
+    <button type="button" onclick="ajouterFacture()">Ajouter Facture</button>
+  </form>
+
+  <!-- Tableau des factures -->
+  <h2>Liste des Factures</h2>
+  <input type="text" id="search-input" placeholder="Rechercher...">
+  <button onclick="exporterCSV()">Exporter en CSV</button>
+
+  <table id="facturesTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Client</th>
+        <th>Date</th>
+        <th>Montant</th>
+        <th>Statut</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Les factures seront affichées ici -->
+    </tbody>
+  </table>
+
+  <div id="pagination"></div>
+
+  <!-- Détails de la facture -->
+  <div id="detailsFacture"></div>
+
+  <script src="factures.js"></script>
+</body>
+</html>

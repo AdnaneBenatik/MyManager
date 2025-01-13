@@ -1,0 +1,119 @@
+/* Styles globaux pour la page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style pour le cadre du formulaire de login et d'enregistrement */
+.login-frame {
+  background-color: #fff;
+  padding: 30px;
+  border: 2px solid #ddd;
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+/* Style du formulaire de login et d'inscription */
+.box {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Style pour les champs de saisie avec l'icône */
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 30px; /* Espace pour l'icône */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.input-container i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  pointer-events: none; /* Désactive l'interaction avec l'icône */
+}
+
+/* Bouton */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #223265;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #223265;
+}
+
+/* Style pour les liens */
+a {
+  color: #223265;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivité */
+@media (max-width: 600px) {
+  .login-frame {
+    padding: 20px;
+    max-width: 90%;
+  }
+}
+
+
+/* Style pour le message de succès */
+.success-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 16px;
+  display: none; /* Par défaut, caché */
+}
+
+/* Pour les transitions ou effets de fondu (facultatif) */
+.success-message p {
+  margin: 0;
+  padding: 0;
+}

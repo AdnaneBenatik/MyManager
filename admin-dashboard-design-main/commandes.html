@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Commandes</title>
+  <link rel="stylesheet" href="commandes.css">
+</head>
+<body>
+  <h1>Gestion des Commandes</h1>
+
+  <!-- Formulaire pour ajouter une commande -->
+  <form id="add-order-form">
+    <label for="Produit">Produit</label>
+    <input type="text" id="Produit" name="Produit" required>
+
+    <label for="orderDate">Date de commande</label>
+    <input type="date" id="orderDate" name="orderDate" required>
+
+    <label for="status">Statut</label>
+    <select id="status" name="status" required>
+      <option value="en attente">En attente</option>
+      <option value="expédiée">Expédiée</option>
+      <option value="livrée">Livrée</option>
+    </select>
+
+    <label for="amount">Montant total (€)</label>
+    <input type="number" id="amount" name="amount" required>
+
+    <button type="submit">Ajouter Commande</button>
+  </form>
+
+  <!-- Tableau des commandes -->
+  <div>
+    <button onclick="exportToCSV()">Exporter en CSV</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th onclick="sortTable(0)">ID</th>
+        <th onclick="sortTable(1)">Produit</th>
+        <th onclick="sortTable(2)">Date</th>
+        <th onclick="sortTable(3)">Statut</th>
+        <th onclick="sortTable(4)">Montant (€)</th>
+        <th>Détails</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="order-table-body">
+      <!-- Les données seront générées dynamiquement ici -->
+    </tbody>
+  </table>
+
+  <!-- Modal de confirmation de suppression -->
+  <div id="delete-confirmation" class="modal">
+    <div class="modal-content">
+      <p>Êtes-vous sûr de vouloir supprimer cette commande ?</p>
+      <button onclick="confirmDelete()">Oui</button>
+      <button onclick="cancelDelete()">Non</button>
+    </div>
+  </div>
+
+  <script src="commandes.js"></script>
+</body>
+</html>

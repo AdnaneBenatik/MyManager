@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Clients</title>
+  <link rel="stylesheet" href="client.css">
+</head>
+<body>
+  <h1>Gestion des Clients</h1>
+
+  <!-- Formulaire pour ajouter un client -->
+  <h2>Ajouter un Client</h2>
+  <form id="create-client-form">
+    <label for="nomClient">Nom :</label>
+    <input type="text" id="nomClient" name="nom" required>
+
+    <label for="emailClient">Email :</label>
+    <input type="email" id="emailClient" name="email" required>
+
+    <label for="phoneClient">Téléphone :</label>
+    <input type="text" id="phoneClient" name="phone">
+
+    <label for="adresseClient">Adresse :</label>
+    <input type="text" id="adresseClient" name="adresse">
+
+    <button type="button" onclick="ajouterClient()">Ajouter Client</button>
+  </form>
+
+  <!-- Tableau des clients -->
+  <h2>Liste des Clients</h2>
+
+  <button onclick="exporterCSV()">Exporter en CSV</button>
+
+  <table id="clientsTable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Téléphone</th>
+        <th>Adresse</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Les clients seront affichés ici -->
+    </tbody>
+  </table>
+
+  <div id="pagination"></div>
+
+  <!-- Détails du client -->
+  <div id="detailsClient"></div>
+
+  <script src="clients.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion des Produits</title>
+  <link rel="stylesheet" href="produits.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Gestion des Produits</h1>
+
+    <!-- Formulaire d'ajout -->
+    <div class="form">
+      <h2>Ajouter un Produit</h2>
+      <input type="text" id="nomProduit" placeholder="Nom du produit">
+      <input type="number" id="prixProduit" placeholder="Prix du produit">
+      <input type="text" id="categorieProduit" placeholder="Catégorie">
+      <input type="number" id="stockProduit" placeholder="Stock">
+      <button onclick="ajouterProduit()">Ajouter</button>
+    </div>
+
+    <!-- Tableau des produits -->
+    <table id="produitsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prix</th>
+          <th>Catégorie</th>
+          <th>Stock</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div id="pagination"></div>
+
+    <!-- Détails du produit -->
+    <div id="detailsProduit"></div>
+
+    <!-- Export CSV -->
+    <button onclick="exporterCSV()">Exporter CSV</button>
+  </div>
+
+  <script src="produits.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> AB.Manager</title>
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- BOX ICONS LINK -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=help" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo">
+        <img src="images/small-logo.png" class="lg-logo" />
+        AB.Manager
+      </div>
+
+      
+
+
+
+      <div class="search-input">
+        <button class="toggle-menu">
+          <i class="bx bx-menu"></i>
+        </button>
+
+      <div class="smart-icons">
+        <span class="dark-mode-toggle">
+          <i class="bx bx-moon"></i>
+        </span>
+      </div>
+
+      
+        
+        
+      </div>
+
+      <div class="language-selector">
+        <select id="languageSelect" onchange="changeLanguage()">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
+      
+      <div class="smart-icons">
+        <span class="cart">
+          <i class="bx bx-cart-alt"></i>
+          <span class="cart-badge">5</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="align-element">
+        <ul>
+          <!-- Produits -->
+          <li id="link-products" class="active">
+            <span><i class="bx bx-cube"></i></span>
+            <span>Produits</span>
+          </li>
+          
+          <!-- Commandes -->
+          <li id="link-orders" class="active">
+            <span><i class="bx bx-box"></i></span>
+            <span>Commandes</span>
+          </li>
+          
+          <!-- Clients -->
+          <li id="link-clients" class="active">
+            <span><i class="bx bx-user"></i></span>
+            <span>Clients</span>
+          </li>
+          
+          <!-- Factures -->
+          <li id="link-invoices" class="active">
+            <span><i class="bx bx-file"></i></span>
+            <span>Factures</span>
+          </li>
+          
+          <!-- Aide -->
+          <li id="link-users" class="active">
+            <span class="material-symbols-outlined"> help </span>
+            <span>Aide</span>
+          </li> 
+
+          <!-- Logout Button -->
+          <li id="link-logout" class="active" onclick="logout()">
+            <span><i class="bx bx-log-out"></i></span>
+            <span>Logout</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+      <div class="title">
+        <h3>Dashboard</h3>
+      </div>
+      <div class="charts">
+        <canvas id="barChart"></canvas>
+        <canvas id="pieChart"></canvas>
+      </div>
+
+      <!-- ================= Nouveaux Clients ================ -->
+      <div class="recentCustomers">
+        <div class="cardHeader">
+          <h2>Derniers Clients</h2>
+        </div>
+        <table id="recentCustomerTable">
+          <thead>
+            <tr>
+              <th>Nom</th>
+              <th>Email</th>
+              <th>Telephone</th>
+              <th>Adresse</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Customers will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- BACKDROP FILTER -->
+    <div class="backdrop-filter"></div>
+
+    <!-- SCRIPT LINK -->
+    <script src="script.js"></script>
+
+    <script>
+      // Fonction de déconnexion
+      function logout() {
+        // Supprimer les informations de l'utilisateur (par exemple, l'email) du localStorage
+        localStorage.removeItem('userEmail');
+
+        // Rediriger vers la page de connexion après la déconnexion
+        window.location.href = 'login.html';
+      }
+
+      // Vérification de l'état de l'utilisateur (ajustez selon vos besoins)
+      function checkUserStatus() {
+        const userEmail = localStorage.getItem('userEmail');
+        if (!userEmail) {
+          // Rediriger vers la page de connexion si l'utilisateur n'est pas connecté
+          window.location.href = 'login.html';
+        }
+      }
+
+      // Appeler la fonction pour vérifier si l'utilisateur est connecté
+      checkUserStatus();
+    </script>
+  </body>
+</html>

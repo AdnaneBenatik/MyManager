@@ -1,0 +1,223 @@
+/* Styles généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #223265;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+/* Formulaire */
+form {
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #223265;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #223265;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+form button:hover {
+    background-color: #223265;
+    transform: translateY(-3px);
+}
+
+/* Tableau */
+#clientsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#clientsTable th, #clientsTable td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#clientsTable th {
+    background-color: #223265;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#clientsTable td {
+    text-align: center;
+}
+
+#clientsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#clientsTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Boutons d'action dans le tableau */
+button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button.edit {
+    background-color: #2196F3;
+    color: white;
+}
+
+button.edit:hover {
+    background-color: #1976D2;
+    transform: translateY(-2px);
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+button.delete:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* Recherche et Export */
+#search-input {
+    margin-bottom: 20px;
+    padding: 12px;
+    width: calc(100% - 100px);
+    max-width: 600px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    border-color: #223265;
+    outline: none;
+}
+
+button[onclick="exporterCSV()"] {
+    padding: 12px 20px;
+    margin-left: 10px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button[onclick="exporterCSV()"]:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+/* Pagination */
+#pagination {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+    gap: 15px;
+}
+
+#pagination button {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+#pagination button.active {
+    background-color: #223265;
+    color: white;
+}
+
+#pagination button:hover {
+    background-color: #eaf6e3;
+    transform: translateY(-2px);
+}
+
+/* Détails du client */
+#detailsClient {
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    display: none; /* Masqué par défaut */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#detailsClient h3 {
+    margin-top: 0;
+    color: #223265;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#detailsClient p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}

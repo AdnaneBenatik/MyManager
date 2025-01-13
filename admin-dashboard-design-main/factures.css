@@ -1,0 +1,161 @@
+/* Style général */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* En-tête principal */
+h1 {
+  text-align: center;
+  background-color: #223265;
+  color: white;
+  padding: 20px 0;
+  margin: 0;
+}
+
+/* Sous-titres */
+h2 {
+  text-align: center;
+  color: #142e79c2;
+  margin: 20px 0 10px;
+}
+
+/* Formulaire pour ajouter une facture */
+form {
+  background: white;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+form input {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form button {
+  width: 100%;
+  background-color: #223265;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #223265;
+}
+
+/* Tableau des factures */
+table {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #223265;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
+table td {
+  color: #555;
+}
+
+/* Rechercher et exporter */
+#search-input {
+  width: 200px;
+  padding: 8px 10px;
+  margin: 20px auto 10px;
+  display: block;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #ff9900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #223265;
+}
+
+/* Détails de la facture */
+#detailsFacture {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* Pagination */
+#pagination {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#pagination button {
+  background-color: #ddd;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#pagination button.active {
+  background-color: #223265;
+  color: white;
+}
+
+#pagination button:hover {
+  background-color: #ccc;
+}

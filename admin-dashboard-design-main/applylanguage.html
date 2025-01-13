@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Translate Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        #language-select {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        #google_translate_element {
+            margin-top: 30px;
+        }
+
+        /* Ensure the Google Translate iframe doesn't cover the content */
+        iframe.goog-te-menu-frame {
+            border: none;
+            position: absolute;
+            top: -5000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change Page Language</h1>
+
+    <!-- Dropdown to select language -->
+    <select id="language-select">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="ar">العربية</option>
+    </select>
+
+    <!-- Placeholder for Google Translate widget -->
+    <div id="google_translate_element"></div>
+
+    <!-- Script to include your JavaScript -->
+    <script>
+        // Initialize Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',  // Default language of the page
+                includedLanguages: 'en,fr,ar',  // Available languages (English, French, Arabic)
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        // Apply Google Translate on page load and set up the language change listener
+        window.addEventListener('DOMContentLoaded', (event) => {
+            // Dynamically load the Google Translate script
+            const googleTranslateScript = document.createElement('script');
+            googleTranslateScript.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+            googleTranslateScript.type = 'text/javascript';
+            document.body.appendChild(googleTranslateScript);
+
+            // Listen for language selection change
+            const languageSelect = document.getElementById('language-select');
+            languageSelect.addEventListener('change', (e) => {
+                const selectedLanguage = e.target.value;
+                const iframe = document.querySelector('iframe.goog-te-menu-frame');
+                if (iframe) {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    const selectLanguage = iframeDoc.querySelector('.goog-te-combo');
+                    if (selectLanguage) {
+                        selectLanguage.value = selectedLanguage;
+                        selectLanguage.dispatchEvent(new Event('change'));
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

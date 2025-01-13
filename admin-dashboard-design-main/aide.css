@@ -1,0 +1,83 @@
+/* Style général */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to right, #fff, fffhsl(0, 0%, 100%));
+    color: #000000c2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.help-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 50px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    width: 90%;
+    max-width: 400px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Texte principal */
+.help-container p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Numéro de téléphone */
+.help-container strong {
+    color: #142e79c2;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Email avec effet interactif */
+.email {
+    font-size: 1.1rem;
+    color: #142e79c2;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.email:hover {
+    color: #ffdd59;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+/* Animation d'entrée en fondu */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .help-container {
+        padding: 20px 30px;
+    }
+
+    .help-container p {
+        font-size: 1rem;
+    }
+
+    .help-container strong {
+        font-size: 1.1rem;
+    }
+}
