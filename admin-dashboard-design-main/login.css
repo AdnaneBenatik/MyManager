@@ -7,16 +7,17 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f7f7f7;
+  background: linear-gradient(135deg, #223265, #ffffff); /* Dégradé bleu foncé vers blanc */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: #fff; /* Assure un bon contraste si du texte est ajouté directement sur le fond */
 }
 
 /* Style pour le cadre du formulaire de login et d'enregistrement */
 .login-frame {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 30px;
   border: 2px solid #ddd;
   border-radius: 12px; /* Coins arrondis */
@@ -32,7 +33,7 @@ body {
 
 h1 {
   text-align: center;
-  color: #333;
+  color: #223265; /* Bleu foncé pour le texte */
   margin-bottom: 20px;
 }
 
@@ -65,7 +66,7 @@ h1 {
 button {
   width: 100%;
   padding: 12px;
-  background-color: #223265;
+  background-color: #223265; /* Bleu foncé */
   color: white;
   border: none;
   border-radius: 4px;
@@ -75,7 +76,7 @@ button {
 }
 
 button:hover {
-  background-color: #223265;
+  background-color: #1b294e; /* Bleu foncé encore plus sombre au survol */
 }
 
 /* Style pour les liens */
@@ -99,10 +100,9 @@ a:hover {
   }
 }
 
-
 /* Style pour le message de succès */
 .success-message {
-  background-color: #4CAF50;
+  background-color: #223265; /* Bleu foncé */
   color: white;
   padding: 10px;
   margin-top: 15px;

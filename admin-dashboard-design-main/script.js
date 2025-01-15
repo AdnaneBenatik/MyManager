@@ -55,7 +55,7 @@ new Chart("pieChart", {
   options: {
     title: {
       display: true,
-      text: "Commandes Totales: 30,000",
+      text: "Commandes Totales: 3000",
     },
   },
 });
