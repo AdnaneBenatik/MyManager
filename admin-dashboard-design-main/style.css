@@ -337,10 +337,13 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     min-height: 400px;
     padding: 20px;
+    width: 100%; /* Assurer une largeur adaptable */
+    max-width: 1200px; /* Augmentation significative de la largeur maximale */
     background: linear-gradient(145deg, #ffffff, #f5f5f5);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     transition: all 0.4s ease-out;
+    margin: 0 auto; /* Centrer horizontalement */
 }
 
 .recentCustomers:hover {
@@ -349,8 +352,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .recentCustomers .imgBx {
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Taille légèrement augmentée pour s'adapter au design élargi */
+    height: 60px;
     border-radius: 50%;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -378,22 +381,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 .recentCustomers table tr td {
-    padding: 14px 20px;
+    padding: 16px 24px; /* Augmenté pour s'adapter au design élargi */
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 16px; /* Taille de police légèrement augmentée */
     color: #444;
     vertical-align: middle;
 }
 
 .recentCustomers table tr td h4 {
-    font-size: 16px;
+    font-size: 18px; /* Augmenté pour une meilleure lisibilité */
     font-weight: 600;
     color: #333;
     margin-bottom: 5px;
 }
 
 .recentCustomers table tr td h4 span {
-    font-size: 14px;
+    font-size: 15px;
     color: #777;
 }
 
@@ -412,11 +415,11 @@ body::-webkit-scrollbar-thumb {
 }
 
 .recentCustomers table tr td .status {
-    padding: 6px 12px;
+    padding: 8px 16px; /* Légèrement élargi pour une meilleure lisibilité */
     border-radius: 25px;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px; /* Taille de police augmentée */
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -488,7 +491,7 @@ body::-webkit-scrollbar-thumb {
 
 
 
-/* Example of dark mode styles */
+/* dark mode styles */
 .dark-mode {
     background-color: #121212;
     color: white;
@@ -499,7 +502,6 @@ body::-webkit-scrollbar-thumb {
     color: white;
 }
 
-/* You can add more dark mode styles as needed */
 
 
 .language-selector {
@@ -513,7 +515,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 14px;
   }
   
-  /* style.css */
+  
 #link-logout {
     margin-top: auto; /* Pousse le bouton de logout vers le bas */
     cursor: pointer;

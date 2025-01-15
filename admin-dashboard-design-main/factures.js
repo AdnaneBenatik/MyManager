@@ -1,6 +1,6 @@
 // Données simulées stockées dans un fichier JSON local
 let factures = [
-    { id: 1, client: "John Doe", date: "2025-01-01", montant: 100.50, statut: "Payée" },
+    { id: 1, client: "Adnane", date: "2025-01-01", montant: 100.50, statut: "Payée" },
   ];
   
   // Fonction pour afficher les factures dans un tableau avec pagination
