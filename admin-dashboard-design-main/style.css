@@ -530,5 +530,71 @@ body::-webkit-scrollbar-thumb {
   #link-logout .bx {
     margin-right: 10px;
   }
+  /* Style général pour la section stats */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style pour chaque statistique */
+  .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Style pour les chiffres */
+  .stat h3 {
+    font-size: 2.5rem;
+    color: #223265;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  
+  /* Style pour les descriptions */
+  .stat p {
+    font-size: 1.2rem;
+    color: #777;
+    margin: 5px 0;
+  }
+  
+  /* Style pour les icônes */
+  .stat i {
+    font-size: 2rem;
+    color: #4caf50;
+    margin-top: 10px;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .stats {
+      flex-direction: column;
+    }
+  
+    .stat {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
   
   
